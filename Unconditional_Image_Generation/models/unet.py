@@ -82,6 +82,7 @@ class Down(nn.Module):
         emb = self.emb_layer(t)[:, :, None, None].repeat(1, 1, x.shape[-2], x.shape[-1])
         return x + emb
     
+    
 class Up(nn.Module):
     def __init__(self, in_channels, out_channels, emb_dim=256):
         super().__init__()
